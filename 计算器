@@ -1,0 +1,42 @@
+import math
+ 
+print("""
+如果你不想计算了,就在符号输入bye
+ 
++    加
+-    减
+*    乘
+/    除
+//   整除
+%    余数
+//%  有余数的除法
+^    平方
+\\/-- 平方根
+""")
+ 
+while True:
+    sz1 = float(input("请输入第一个数字:"))
+    fh = input("符号:")
+    if fh == "bye":
+        print("再见!")
+        break
+    if fh == "\\/--":
+        print(f"={math.sqrt(sz1)}")
+    else:
+        sz2 = float(input("请输入第二个数字:"))
+    if fh == "+":
+        print(f"={sz1 + sz2}")
+    if fh == "-":
+        print(f"={sz1 - sz2}")
+    if fh == "*":
+        print(f"={sz1 * sz2}")
+    if fh == "/":
+        print(f"={sz1 / sz2}")
+    if fh == "^":
+        print(f"={math.pow(sz1, sz2)}")
+    if fh == "//":
+        print(f"={sz1 // sz2}")
+    if fh == "%":
+        print(f"={sz1 % sz2}")
+    if fh == "//%":
+        print(f"={sz1 // sz2}...{sz1 % sz2}")
